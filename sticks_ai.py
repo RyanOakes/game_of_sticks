@@ -6,6 +6,13 @@ def clear():
     else:
         os.system('clear')
 
+def choose_game_mode():
+    game_mode = input("""\nGreetings mortal. Welcome to Sticks!\n
+Would you like to play against another human or the computer?
+Type (1) to play against a friend or (2) to play against the computer.
+\nWhat will it be? """)
+
+    return game_mode
 
 def choose_stick_count():
     stick_count = input("How many sticks are there on the table initially?\n>")
@@ -54,27 +61,40 @@ def go_again():
 
 def main():
     clear()
-    stick_count = choose_stick_count()
-    turn_counter = 1
 
-    while True:
+    choose_game_mode()
+
+    if choose_game_mode == 1:
+
+        stick_count = choose_stick_count()
+        turn_counter = 1
+
+
+
+        while True:
+            clear()
+            if turn_counter % 2 == 1:
+                print("You're up player one!")
+            else:
+                print("You're up player two!")
+
+            stick_count = get_pickup_amount(stick_count)
+
+            if check_loss(stick_count):
+                print("FAIL! Get your shit together. Do you even pick up sticks bro?")
+                break
+
+            turn_counter += 1
+
+        if go_again():
+            main()
         clear()
-        if turn_counter % 2 == 1:
-            print("You're up player one!")
-        else:
-            print("You're up player two!")
 
-        stick_count = get_pickup_amount(stick_count)
+    else:
+        print("CYBERDYNE SYSTEMS WILL CRUSH YOU.")
 
-        if check_loss(stick_count):
-            print("FAIL! Get your shit together. Do you even pick up sticks bro?")
-            break
 
-        turn_counter += 1
 
-    if go_again():
-        main()
-    clear()
 
 if __name__ == '__main__':
     main()
