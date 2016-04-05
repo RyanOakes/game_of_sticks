@@ -1,1 +1,1 @@
-Game
+Game Of Sticks!
