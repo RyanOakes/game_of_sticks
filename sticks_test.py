@@ -1,12 +1,14 @@
 import unittest
-from pickup_pvp import *
+from sticks import *
+
+
 
 
 class TestSticks(unittest.TestCase):
 
 
     def test_check_initial_stick_count(self):
-        self.assertTrue(self.check_initial_stick_count('30'))
+        self.assertTrue(check_initial_stick_count('30'))
 
     def test_check_initial_stick_count_with_letter(self):
         self.assertFalse(check_initial_stick_count('D'))
