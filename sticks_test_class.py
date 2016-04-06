@@ -1,10 +1,10 @@
 import unittest
-from sticks import *
+from pickup_pvp.py import *
+from pickup_ai_cb.py import *
 
 
 
-
-class TestSticks(unittest.TestCase):
+class TestSticksClassesVersion(unittest.TestCase):
 
 
     def test_check_initial_stick_count(self):
