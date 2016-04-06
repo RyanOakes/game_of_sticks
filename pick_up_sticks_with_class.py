@@ -56,7 +56,9 @@ from pickup_pvp import *
 def main():
     # stick_count = choose_stick_count()
     turn_counter = 1
-    pvp = RunGame()
+    pvp = PvPGame()
+    # pve = AIGame()
+
 
     pvp.run_game()
     # while True:
