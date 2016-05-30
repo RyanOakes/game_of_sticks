@@ -8,7 +8,7 @@ def clear():
 
 
 def choose_stick_count():
-    stick_count = input("How many sticks are there on the table initially?\n>")
+    stick_count = input("How many sticks are there on the table initially? (10-100)\n>")
 
     check = check_initial_stick_count(stick_count)
     print("Check: ", check)
@@ -26,9 +26,9 @@ def check_initial_stick_count(stick_count):
 
 def get_pickup_amount(stick_count):
     if stick_count == 1:
-        print("There is 1 stick left. You're so fucked...")
-    else:
-        pickup_amount = input("There are {} sticks left. How many would you like to take (1-3)?\n>".format(stick_count))
+        print("There is 1 stick left. You're screwed...")
+
+    pickup_amount = input("There are {} sticks left. How many would you like to take (1-3)?\n>".format(stick_count))
 
     if not acceptable_pickup_amount(pickup_amount):
         print("Unacceptable entry - please choose between 1-3 sticks")
@@ -60,14 +60,14 @@ def main():
     while True:
         clear()
         if turn_counter % 2 == 1:
-            print("You're up player one!")
+            print("You're up Player One!")
         else:
-            print("You're up player two!")
+            print("You're up Player Two!")
 
         stick_count = get_pickup_amount(stick_count)
 
         if check_loss(stick_count):
-            print("FAIL! Get your shit together. Do you even pick up sticks bro?")
+            print("FAIL! Do you even pick up sticks bro?")
             break
 
         turn_counter += 1

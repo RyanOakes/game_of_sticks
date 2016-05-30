@@ -33,7 +33,7 @@ def check_initial_stick_count(stick_count):
 
 def get_pickup_amount(stick_count):
     if stick_count == 1:
-        print("There is 1 stick left. You're so fucked...")
+        print("There is 1 stick left. You're screwed...")
     else:
         pickup_amount = input("There are {} sticks left. How many would you like to take (1-3)?\n>".format(stick_count))
 
@@ -81,7 +81,7 @@ def main():
             stick_count = get_pickup_amount(stick_count)
 
             if check_loss(stick_count):
-                print("FAIL! Get your shit together. Do you even pick up sticks bro?")
+                print("FAIL! Do you even pick up sticks bro?")
                 break
 
             turn_counter += 1
@@ -92,8 +92,6 @@ def main():
 
     else:
         print("CYBERDYNE SYSTEMS WILL CRUSH YOU.")
-
-
 
 
 if __name__ == '__main__':
