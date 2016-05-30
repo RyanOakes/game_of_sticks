@@ -15,7 +15,7 @@ picks up 1 to 3 sticks. The one who has to pick the final stick loses!
 
 ##Gameplay
 
-There are multiple version of this game.
+There are multiple versions of this game.
 
 The first one is a Player vs. Player (sticks.py).
 
